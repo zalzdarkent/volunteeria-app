@@ -1,3 +1,1 @@
-<div>
-    <a href="#">Volunteeria</a>
-</div>
+<img src="{{ asset('/images/logo.png') }}" alt="Logo" class="h-10">
