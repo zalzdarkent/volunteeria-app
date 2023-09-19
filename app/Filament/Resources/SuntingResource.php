@@ -17,7 +17,7 @@ class SuntingResource extends Resource
 {
     protected static ?string $model = Sunting::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-pencil-square';
     public static function getNavigationBadge(): ?string {
         return static::getModel()::count();
     }
@@ -103,11 +103,13 @@ class SuntingResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('link_form')
                     ->searchable()
-                    ->limit(10),
+                    ->limit(10)
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('kuota')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('telepon')
-                    ->searchable(),
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 Tables\Columns\TextColumn::make('email')
                     ->searchable()
                     ->limit(20),

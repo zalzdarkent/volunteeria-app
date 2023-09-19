@@ -35,6 +35,7 @@ class AdminPanelProvider extends PanelProvider
             ->sidebarCollapsibleOnDesktop()
             // ->sidebarFullyCollapsibleOnDesktop()
             ->favicon(asset('images/title.png'))
+            ->font('Poppins')
             ->pages([
                 Pages\Dashboard::class,
             ])

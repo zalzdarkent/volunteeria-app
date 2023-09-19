@@ -19,7 +19,7 @@ class TipsResource extends Resource
 {
     protected static ?string $model = Tips::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-light-bulb';
     public static function getNavigationBadge(): ?string
     {
         return static::getModel()::count();
@@ -33,9 +33,11 @@ class TipsResource extends Resource
                     ->required()->preserveFilenames()->image()->disk('public')->directory('Img'),
                 Forms\Components\TextInput::make('slug')
                     ->required()
+                    ->placeholder('Cara melakukan interview kerja ataupun volunteer')
                     ->maxLength(255),
                 Forms\Components\TextInput::make('link')
                     ->required()
+                    ->placeholder('https://volunteeria.com')
                     ->maxLength(255),
             ]);
     }
@@ -46,9 +48,12 @@ class TipsResource extends Resource
             ->columns([
                 Tables\Columns\ImageColumn::make('foto'),
                 Tables\Columns\TextColumn::make('slug')
-                    ->searchable(),
+                    ->searchable()
+                    ->limit(30),
                 Tables\Columns\TextColumn::make('link')
-                    ->searchable(),
+                    ->searchable()
+                    ->view('filament.link')
+                    ->limit(20),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
