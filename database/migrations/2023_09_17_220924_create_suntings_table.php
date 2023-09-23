@@ -24,7 +24,6 @@ return new class extends Migration
             $table->string('telepon');
             $table->string('email');
             $table->string('instagram');
-            $table->string('facebook')->nullable();
             $table->timestamps();
         });
     }

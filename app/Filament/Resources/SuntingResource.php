@@ -73,9 +73,6 @@ class SuntingResource extends Resource
                     ->required()
                     ->placeholder('@volunteeria')
                     ->maxLength(255),
-                Forms\Components\TextInput::make('facebook')
-                    ->placeholder('Optional')
-                    ->maxLength(255),
             ]);
     }
 
@@ -114,8 +111,6 @@ class SuntingResource extends Resource
                     ->searchable()
                     ->limit(20),
                 Tables\Columns\TextColumn::make('instagram')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('facebook')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
