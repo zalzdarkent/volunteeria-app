@@ -20,45 +20,24 @@ Volunteeria merupakan aplikasi berbasis web yang bertujuan untuk memfasilitasi p
 Kami masih dalam tahap pengembangan fitur, jika ada saran mengenai fitur selanjutnya bisa dikirim melalui instagram saya @zalz_ummar19
 
 ## Cara menjalankan aplikasi
-Jalankan perintah ini terlebih dahulu
+1. clone terlebih dahulu ke dalam laptop atau device kalian.
+
+2. Setelah di-clone selanjutnya adalah copy file `.env.example` lalu paste dan beri nama `.env`
+
+3. Jalankan perintah ini
 `composer install`
 
-Setelah itu ketikan 
-`php artisan key:generate` untuk membuat APP_KEY 
+4. Setelah itu ketikan 
+`php artisan key:generate` untuk membuat APP_KEY.
 
-## Laravel Sponsors
+5. Lalu cari file `.env` lagi dan sesuaikan database yang kamu gunakan lalu buat database tersebut.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+6. Setelah membuat database, ketikan perintah `php artisan migrate` untuk membuat table database sesuai dengan yang sudah dibuat dalam projek laravel.
 
-### Premium Partners
+7. Selanjutnya kamu dapat menjalankan laravel tersebut dengan mengetik `php artisan serve`
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## Lisensi
+Aplikasi Volunteeria bersifat open source. Anda dapat mengubah, lalu publish ke internet.
 
-## Contributing
+Note: jangan lupa berikan credit jika projek ini dimuat ke internet, hak cipta dilindungi.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-#
