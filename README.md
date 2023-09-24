@@ -21,11 +21,10 @@ Kami masih dalam tahap pengembangan fitur, jika ada saran mengenai fitur selanju
 
 ## Cara menjalankan aplikasi
 Jalankan perintah ini terlebih dahulu
-
 `composer install`
 
 Setelah itu ketikan 
-`php artisan key:generate`
+`php artisan key:generate` untuk membuat APP_KEY 
 
 ## Laravel Sponsors
 
