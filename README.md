@@ -7,27 +7,25 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Tampilan admin volunteeria
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Volunteeria merupakan aplikasi berbasis web yang bertujuan untuk memfasilitasi pencarian lowongan volunteer, memudahkan pencarian lowongan yang lebih spesifik dengan fitur pencarian berdasarkan lokasi, menghubungkan organisasi dengan calon volunteer, dan meningkatkan partisipasi dalam kegiatan sukarelawan.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Fitur tampilan admin
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Menyediakan fitur untuk mem-publish lowongan volunteer dari masing-masing organisasi.
 
-## Learning Laravel
+- Menyediakan berita yang dapat ditulis langsung oleh masing-masing organisasi
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Kami masih dalam tahap pengembangan fitur, jika ada saran mengenai fitur selanjutnya bisa dikirim melalui instagram saya @zalz_ummar19
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Cara menjalankan aplikasi
+Jalankan perintah ini terlebih dahulu
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+`composer install`
+
+Setelah itu ketikan 
+`php artisan key:generate`
 
 ## Laravel Sponsors
 
