@@ -18,6 +18,7 @@ class SuntingResource extends Resource
     protected static ?string $model = Sunting::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-pencil-square';
+    protected static ?string $navigationGroup = 'Volunteer Management';
     public static function getNavigationBadge(): ?string {
         return static::getModel()::count();
     }

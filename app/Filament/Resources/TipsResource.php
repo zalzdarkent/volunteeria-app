@@ -20,6 +20,7 @@ class TipsResource extends Resource
     protected static ?string $model = Tips::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-light-bulb';
+    protected static ?string $navigationGroup = 'Volunteer Management';
     public static function getNavigationBadge(): ?string
     {
         return static::getModel()::count();
