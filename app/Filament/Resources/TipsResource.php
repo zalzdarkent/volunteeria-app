@@ -9,6 +9,7 @@ use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
 use Illuminate\Support\Collection;
+use Filament\Forms\Components\Card;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\TipsResource\Pages;
@@ -30,16 +31,18 @@ class TipsResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\FileUpload::make('foto')
-                    ->required()->preserveFilenames()->image()->disk('public')->directory('Img'),
-                Forms\Components\TextInput::make('slug')
-                    ->required()
-                    ->placeholder('Cara melakukan interview kerja ataupun volunteer')
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('link')
-                    ->required()
-                    ->placeholder('https://volunteeria.com')
-                    ->maxLength(255),
+                Card::make()->schema([
+                    Forms\Components\FileUpload::make('foto')
+                        ->required()->preserveFilenames()->image()->disk('public')->directory('Img'),
+                    Forms\Components\TextInput::make('slug')
+                        ->required()
+                        ->placeholder('Cara melakukan interview kerja ataupun volunteer')
+                        ->maxLength(255),
+                    Forms\Components\TextInput::make('link')
+                        ->required()
+                        ->placeholder('https://volunteeria.com')
+                        ->maxLength(255),
+                ]),
             ]);
     }
 
@@ -70,9 +73,9 @@ class TipsResource extends Resource
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make()->after(
-                    function(Tips $record){
-                        if($record->foto){
-                            Storage::delete('public/'.$record->foto);
+                    function (Tips $record) {
+                        if ($record->foto) {
+                            Storage::delete('public/' . $record->foto);
                         }
                     }
                 ),
