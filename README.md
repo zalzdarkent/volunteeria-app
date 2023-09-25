@@ -17,6 +17,8 @@ Volunteeria merupakan aplikasi berbasis web yang bertujuan untuk memfasilitasi p
 
 - Menyediakan berita yang dapat ditulis langsung oleh masing-masing organisasi
 
+- Aplikasi ini masih belum support untuk multi user karena hanya tahap percobaan atau tahap prospek teknologi library open source yang terbaru
+
 Kami masih dalam tahap pengembangan fitur, jika ada saran mengenai fitur selanjutnya bisa dikirim melalui instagram saya @zalz_ummar19
 
 ## Cara menjalankan aplikasi
