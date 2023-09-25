@@ -12,6 +12,7 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Forms\Components\Card;
 
 class SuntingResource extends Resource
 {
@@ -26,7 +27,8 @@ class SuntingResource extends Resource
     public static function form(Form $form): Form
     {
         return $form
-            ->schema([
+        ->schema([
+            Card::make()->schema([
                 Forms\Components\TextInput::make('posisi')
                     ->placeholder('Admin')
                     ->required()
@@ -74,7 +76,8 @@ class SuntingResource extends Resource
                     ->required()
                     ->placeholder('@volunteeria')
                     ->maxLength(255),
-            ]);
+            ]),
+        ]);
     }
 
     public static function table(Table $table): Table
